@@ -5,7 +5,7 @@ function Contact() {
 const formRef = useRef(null);
 
 useEffect(() => {
-emailjs.init('7YRfFUq4aT6apOysy');
+emailjs.init('7YRfFUq4aT6apOysy');// <-- replace with your Public Key from EmailJS dashboard
 }, []);
 
 const handleSubmit = async (e) => {
@@ -13,7 +13,7 @@ e.preventDefault();
 try {
 await emailjs.sendForm(
 'service_p0751az', // <-- replace with the Service ID you copied
-'template_euq3hc9',
+'template_euq3hc9',// <-- replace with the Template ID you copied
 formRef.current
 );
 alert('Thanks for reaching out. I appreciate your interest and will respond shortly.');
